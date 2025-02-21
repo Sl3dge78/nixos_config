@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+pushd ~/nixos_config/
+
+# if git diff --quiet '*.nix'; then
+#   echo "No changes detected, exiting."
+#   popd
+#   exit 0
+# fi
+
+sudo nixos-rebuild switch --flake ~/nixos_config#default
+gen=$(nixos-rebuild list-generations | grep current)
+git commit -am "$gen"
+
+popd
