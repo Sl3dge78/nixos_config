@@ -84,6 +84,8 @@ let
     enable = true;
     userName = "sl3dge78";
     userEmail = "sl3dge78@users.noreply.github.com";
+    extraConfig.credential.helper = "oauth";
+    extraConfig.credential.credentialStore = "cache";
   };
 
   # ======== NVIM ========
@@ -301,6 +303,7 @@ let
     };
     "org/gnome/desktop/interface" = {
       gtk-theme = "Mint-Y-Dark-Aqua";
+      monospace-font-name = "Source Code Pro 10";
     };
     "org/cinnamon/desktop/applications/terminal" = {
       exec = "alacritty";
