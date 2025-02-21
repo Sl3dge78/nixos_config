@@ -291,12 +291,20 @@ let
 		panels-enabled = ["1:0:top"];
 		panels-height = ["1:20"];
 	};
+    "org/cinnamon/theme" = {
+      name = "Mint-Y-Dark-Aqua";
+    };
+    "org/cinnamon/desktop/interface" = {
+      cursor-theme = "Bibata-Modern-Classic";
+      gtk-theme = "Mint-Y-Dark-Aqua";
+      icon-theme = "Mint-Y-Sand";
+    };
+    "org/gnome/desktop/interface" = {
+      gtk-theme = "Mint-Y-Dark-Aqua";
+    };
     "org/cinnamon/desktop/applications/terminal" = {
       exec = "alacritty";
       exec-arg = "";
-    };
-    "org/x/apps/portal" = {
-      color-scheme = "prefer-dark";
     };
     "org/cinnamon/desktop/wm/preferences" = {
       mouse-button-modifier = "<Super>";
@@ -307,6 +315,9 @@ let
     "org/nemo/preferences" = {
       default-folder-viewer = "list-view";
       show-hidden-files = true;
+    };
+    "org/x/apps/portal" = {
+      color-scheme = "prefer-dark";
     };
   };
 }

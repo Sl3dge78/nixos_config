@@ -9,7 +9,7 @@ pushd ~/nixos_config/
 #   exit 0
 # fi
 
-sudo nixos-rebuild switch --flake ~/nixos_config#default
+sudo nixos-rebuild switch --flake path:#default
 gen=$(nixos-rebuild list-generations | grep current)
 git commit -am "$gen"
 
