@@ -55,6 +55,7 @@ let
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    ".config/nixpkgs/config.nix".text = " { allowUnfree = true; } ";
   };
 
   # Home Manager can also manage your environment variables through
@@ -80,6 +81,8 @@ let
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  nixpkgs.config.allowUnfree = true;
+
   programs.git = {
     enable = true;
     userName = "sl3dge78";
@@ -87,6 +90,43 @@ let
     extraConfig.credential.helper = "oauth";
     extraConfig.credential.credentialStore = "cache";
   };
+
+  # ======== ALACRITTY ========
+    programs.alacritty = {
+      enable = true;
+      settings = {
+        font = {
+          size = 12;
+          normal.family = "Tamsyn";
+        };
+        colors = {
+          primary = {
+            background = "#282828";
+            foreground = "#ebdbb2";
+          };
+          normal = {
+            black   = "#282828";
+            red     = "#cc241d";
+            green   = "#98971a";
+            yellow  = "#d79921";
+            blue    = "#458588";
+            magenta = "#b16286";
+            cyan    = "#689d6a";
+            white   = "#a89984";
+          };
+          bright = {
+            black   = "#928374";
+            red     = "#fb4934";
+            green   = "#b8bb26";
+            yellow  = "#fabd2f";
+            blue    = "#83a598";
+            magenta = "#d3869b";
+            cyan    = "#8ec07c";
+            white   = "#ebdbb2";
+          };
+        };
+      };
+    };
 
   # ======== NVIM ========
   programs.neovim = {
@@ -300,10 +340,14 @@ let
       cursor-theme = "Bibata-Modern-Classic";
       gtk-theme = "Mint-Y-Dark-Aqua";
       icon-theme = "Mint-Y-Sand";
+      monospace-font-name = "Tamsyn";
+      font-name = "Ubuntu 10";
     };
     "org/gnome/desktop/interface" = {
       gtk-theme = "Mint-Y-Dark-Aqua";
-      monospace-font-name = "Source Code Pro 10";
+      monospace-font-name = "Tamsyn Medium 15";
+      document-font-name = "Sans 10";
+      font-name = "Ubuntu 10";
     };
     "org/cinnamon/desktop/applications/terminal" = {
       exec = "alacritty";
@@ -311,13 +355,18 @@ let
     };
     "org/cinnamon/desktop/wm/preferences" = {
       mouse-button-modifier = "<Super>";
+      titlebar-font = "Ubuntu 10";
     };
     "org/gnome/desktop/wm/preferences" = {
       mouse-button-modifier = "<Super>";
+      titlebar-font = "Ubuntu 10";
     };
     "org/nemo/preferences" = {
       default-folder-viewer = "list-view";
       show-hidden-files = true;
+    };
+    "org/nemo/desktop" = {
+      font = "Ubuntu 10";
     };
     "org/x/apps/portal" = {
       color-scheme = "prefer-dark";

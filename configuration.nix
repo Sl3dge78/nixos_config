@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, options, ... }:
 
 {
   imports =
@@ -82,8 +82,25 @@
     ];
   };
 
+  fonts = { 
+    packages = with pkgs; [ 
+      tamsyn
+    ];
+    fontconfig = {
+      defaultFonts = {
+        monospace = ["Tamsyn"];
+      };
+    };
+  };
+
+
   programs.firefox.enable = true;
-  programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    package = pkgs.steam.override {
+      extraPkgs = pkgs: [ pkgs.sdl3 ];
+    };
+  };
 
   nixpkgs.config.allowUnfree = true;
 
@@ -95,6 +112,7 @@
     alacritty
     source-code-pro
     git-credential-oauth
+    unzip
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -105,10 +123,10 @@
   };
 
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    glibc
-    libcxx
-  ];
+  programs.nix-ld.libraries =
+    options.programs.nix-ld.libraries.default ++
+    (with pkgs; [
+    ]);
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
