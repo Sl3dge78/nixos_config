@@ -45,7 +45,6 @@
     };
   };
 
-  # TODO: Set your username
   home = {
     username = "sl3dge";
     homeDirectory = "/home/sl3dge";
@@ -53,31 +52,16 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
-
-  fonts = { 
-    packages = with pkgs; [ 
-      gohufont
-    ];
-    fontconfig = {
-      defaultFonts = {
-        monospace = ["GohuFont"];
-      };
-    };
-  };
-
   programs.firefox.enable = true;
-  programs.steam.enable = true;
 
   home.packages = with pkgs; [
+    gohufont
     lazygit
-	neovim
 	discord
     alacritty
     git-credential-oauth
     unzip
-    jai
-    sdl3
+    #jai
   ];
 
   # Enable home-manager and git
@@ -143,7 +127,7 @@
 	lazygit-nvim
 	vim-dispatch
 	plenary-nvim
-	jai-vim 
+	#jai-vim 
 	rust-vim
 	vim-glsl
 	vim-polyglot

@@ -3,13 +3,7 @@
 set -e
 pushd ~/nixos_config/
 
-# if git diff --quiet '*.nix'; then
-#   echo "No changes detected, exiting."
-#   popd
-#   exit 0
-# fi
-
-sudo nixos-rebuild switch --flake path:#default
+sudo nixos-rebuild switch --flake .#nixos
 gen=$(nixos-rebuild list-generations | grep current)
 git commit -am "$gen"
 
