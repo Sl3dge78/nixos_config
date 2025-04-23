@@ -1,6 +1,6 @@
 # Custom packages, that can be defined similarly to ones from nixpkgs
 # You can build them using 'nix build .#example'
 pkgs: {
-  # example = pkgs.callPackage ./example { };
-  # jai = pkgs.callPackage ./jai { };
+  nixpkgs.config.allowUnfree = true;
+  jai = pkgs.callPackage ./jai.nix { };
 }

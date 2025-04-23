@@ -42,6 +42,7 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
+      allowUnfreePredicate = _: true;
     };
   };
 
@@ -61,7 +62,7 @@
     alacritty
     git-credential-oauth
     unzip
-    #jai
+    # outputs.packages.${system}.jai
   ];
 
   # Enable home-manager and git
@@ -71,7 +72,7 @@
     userName = "sl3dge78";
     userEmail = "sl3dge78@users.noreply.github.com";
     extraConfig.credential.helper = "oauth";
-    extraConfig.credential.credentialStore = "cache";
+    extraConfig.credential.credentialStore = "cache --timeout 21600";
   };
 
   # Nicely reload system units when changing configs
@@ -122,16 +123,17 @@
      enable = true;
      defaultEditor = true;
      plugins = with pkgs.vimPlugins; [
-	gruvbox
-	vim-airline
-	lazygit-nvim
-	vim-dispatch
-	plenary-nvim
-	#jai-vim 
-	rust-vim
-	vim-glsl
-	vim-polyglot
-	nvim-lspconfig
+        gruvbox
+        vim-airline
+        lazygit-nvim
+        vim-dispatch
+        plenary-nvim
+        telescope-nvim
+        #jai-vim 
+        rust-vim
+        vim-glsl
+        vim-polyglot
+        nvim-lspconfig
      ];
      extraConfig = ''
 	"remove gui menus & stuff 

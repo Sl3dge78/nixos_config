@@ -48,6 +48,7 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
+      allowUnfreePredicate = _: true;
     };
   };
 
@@ -71,7 +72,15 @@
   };
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot = {
+    enable = true;
+    windows = {
+      "10" = {
+        efiDeviceHandle = "HD0a65535a2";
+        sortKey = "aWindows";
+      };
+    };
+  };
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
@@ -169,6 +178,8 @@
 
   environment.systemPackages = with pkgs; [
     sdl3
+    ripgrep
+    jai
   ];
 
   programs.steam = {
