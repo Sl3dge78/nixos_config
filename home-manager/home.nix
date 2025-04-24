@@ -85,6 +85,9 @@
     programs.alacritty = {
       enable = true;
       settings = {
+        window = {
+          startup_mode = "Maximized";
+        };
         font = {
           size = 10;
           normal.family = "GohuFont";
@@ -129,7 +132,7 @@
         vim-dispatch
         plenary-nvim
         telescope-nvim
-        #jai-vim 
+        pkgs.jai-vim 
         rust-vim
         vim-glsl
         vim-polyglot

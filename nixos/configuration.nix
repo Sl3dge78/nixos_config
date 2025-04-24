@@ -179,6 +179,7 @@
   environment.systemPackages = with pkgs; [
     sdl3
     ripgrep
+    unityhub
     jai
   ];
 

@@ -3,4 +3,5 @@
 pkgs: {
   nixpkgs.config.allowUnfree = true;
   jai = pkgs.callPackage ./jai.nix { };
+  jai-vim = pkgs.callPackage ./jai-vim.nix {};
 }
