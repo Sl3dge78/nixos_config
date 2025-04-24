@@ -321,11 +321,18 @@
 			"panel1:right:11:calendar@cinnamon.org:13"
 			"panel1:right:12:cornerbar@cinnamon.org:14"
 			"panel1:left:2:window-list@cinnamon.org:15"
+            "panel2:right:1:calendar@cinnamon.org:16"
+            "panel2:left:0:window-list@cinnamon.org:17"
 		];
-		next-applet-id = 16;
-		panel-zone-symbolic-icon-sizes = "[{\"panelId\": 1, \"left\": 28, \"center\": 28, \"right\": 16}]";
-		panels-enabled = ["1:0:top"];
-		panels-height = ["1:20"];
+		next-applet-id = 18;
+        panel-zone-icon-sizes = "[{\"panelId\":1,\"left\":0,\"center\":0,\"right\":24},{\"left\":0,\"center\":0,\"right\":0,\"panelId\":2}]";
+        panel-zone-symbolic-icon-sizes = "[{\"panelId\":1,\"left\":28,\"center\":28,\"right\":16},{\"left\":28,\"center\":28,\"right\":28,\"panelId\":2}]";
+        panel-zone-text-sizes = "[{\"panelId\":1,\"left\":0,\"center\":0,\"right\":0},{\"left\":0,\"center\":0,\"right\":0,\"panelId\":2}]";
+		panels-enabled = ["1:0:top" "2:1:top"];
+		panels-height = ["1:20" "2:20"];
+        panels-autohide = ["1:false" "2:false"];
+        panels-hide-delay = ["1:0" "2:0"];
+        panels-show-delay = ["1:0" "2:0"];
 	};
     "org/cinnamon/theme" = {
       name = "Mint-Y-Dark-Aqua";
