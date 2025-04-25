@@ -181,6 +181,7 @@
     ripgrep
     unityhub
     jai
+    signal-desktop
   ];
 
   programs.steam = {
