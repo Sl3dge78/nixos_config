@@ -71,7 +71,7 @@
     enable = true;
     userName = "sl3dge78";
     userEmail = "sl3dge78@users.noreply.github.com";
-    extraConfig.credential.helper = [ "cache --timeout 2500000" "oauth"]; # 30 days
+    extraConfig.credential.helper = [ "store" ];
   };
 
   # Nicely reload system units when changing configs

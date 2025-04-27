@@ -182,6 +182,7 @@
     unityhub
     jai
     signal-desktop
+    chromium
   ];
 
   programs.steam = {
