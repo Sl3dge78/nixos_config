@@ -110,8 +110,18 @@
     variant = "altgr-intl";
   };
 
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
   # GPU
   hardware.graphics = {
+    
     enable = true;
   };
   services.xserver.videoDrivers = ["nvidia"];
@@ -180,9 +190,20 @@
     sdl3
     ripgrep
     unityhub
-    jai
+    # jai
     signal-desktop
     chromium
+   
+    waybar
+    dunst
+    libnotify
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    gohufont
+    terminus_font
+    terminus-nerdfont
+    nerdfonts
+    font-awesome
+    hyprpaper
   ];
 
   programs.steam = {

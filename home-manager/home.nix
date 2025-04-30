@@ -16,8 +16,7 @@
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
 
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
+    ./hyprland.nix
   ];
 
   nixpkgs = {
@@ -56,7 +55,6 @@
   programs.firefox.enable = true;
 
   home.packages = with pkgs; [
-    gohufont
     lazygit
 	discord
     alacritty
@@ -86,10 +84,15 @@
       settings = {
         window = {
           startup_mode = "Maximized";
+          # opacity = 0.9;
         };
         font = {
           size = 10;
+          # normal.family = "GohuFont 14 Nerd Font Mono";
           normal.family = "GohuFont";
+        };
+        mouse = {
+          hide_when_typing = true;
         };
         colors = {
           primary = {
