@@ -103,11 +103,19 @@
 
   # X
   services.xserver.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
+  # services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.cinnamon.enable = true;
   services.xserver.xkb = {
     layout = "us";
     variant = "altgr-intl";
+  };
+
+  services.displayManager.sddm = {
+    package = pkgs.kdePackages.sddm;
+    enable = true;
+    wayland.enable = true;
+    extraPackages = [pkgs.sddm-astronaut];
+    theme = "sddm-astronaut-theme";
   };
 
   programs.hyprland = {
@@ -204,6 +212,7 @@
     nerdfonts
     font-awesome
     hyprpaper
+    sddm-astronaut
   ];
 
   programs.steam = {
