@@ -14,7 +14,7 @@
       "$terminal" = "alacritty";
       "$fileManager" = "nemo";
       "$menu" = "rofi -show run";
-      exec-once = "waybar & dunst";
+      exec-once = ["waybar & dunst" "hyprpaper"];
       env = [ "HYPRCURSOR_THEME,rose-pine-hyprcursor" "XCURSOR_SIZE,24" ];
       general = {
         gaps_in = 1;
@@ -80,7 +80,7 @@
       };
       misc = {
         force_default_wallpaper = 2;
-        disable_hyprland_logo = false; # If true disables the random hyprland logo / anime girl background. :(
+        disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background. :(
       };
 
       input = {
