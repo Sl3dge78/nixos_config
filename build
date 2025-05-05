@@ -2,13 +2,9 @@
 
 set -e
 pushd ~/nixos_config/
-git add --intent-to-add pkgs/jai/.
-git update-index --skip-worktree --assume-unchanged pkgs/jai/.
 
 sudo nixos-rebuild switch --flake .#nixos
 gen=$(nixos-rebuild list-generations | grep current)
-git add .
-git reset pkgs/jai/.
-git commit -m "$gen"
+git commit -am "$gen"
 
 popd

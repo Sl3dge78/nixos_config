@@ -2,9 +2,6 @@
 
 set -e
 pushd ~/nixos_config/
-git add --intent-to-add pkgs/jai/.
-git update-index --skip-worktree --assume-unchanged pkgs/jai/.
-
 sudo nixos-rebuild test --flake .#nixos
 
 popd

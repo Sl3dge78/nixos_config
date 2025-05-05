@@ -60,7 +60,6 @@
     alacritty
     git-credential-oauth
     unzip
-    # outputs.packages.${system}.jai
   ];
 
   # Enable home-manager and git
@@ -77,6 +76,10 @@
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.05";
+
+  home.file.".config/nixpkgs/config.nix".text = ''
+  { allowUnfree = true; }
+    '';
 
   # ======== ALACRITTY ========
     programs.alacritty = {

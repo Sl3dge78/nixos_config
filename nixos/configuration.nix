@@ -198,7 +198,7 @@
     sdl3
     ripgrep
     unityhub
-    # jai
+    jai
     signal-desktop
     chromium
    
