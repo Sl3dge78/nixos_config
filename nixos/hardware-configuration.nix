@@ -30,6 +30,18 @@
     fsType = "ext4";
   };
 
+  fileSystems."/run/media/sl3dge/MULTIMEDIA" = 
+  {
+    device = "/dev/disk/by-uuid/AECEE4A9CEE46AD3";
+    fsType = "ntfs";
+  };
+
+  fileSystems."/run/media/sl3dge/BUREAUTIQUE" = 
+  {
+    device = "/dev/disk/by-uuid/06CEDC2ACEDC1431";
+    fsType = "ntfs";
+  };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
