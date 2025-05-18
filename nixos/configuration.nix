@@ -104,7 +104,7 @@
   # X
   services.xserver = { 
     enable = true;
-    desktopManager.cinnamon.enable = true;
+    # desktopManager.cinnamon.enable = true;
     xkb = {
       layout = "us";
       variant = "altgr-intl";
@@ -196,7 +196,9 @@
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
+    gamescopeSession.enable = true;
   };
+  programs.gamescope.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = options.programs.nix-ld.libraries.default ++

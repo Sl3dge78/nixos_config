@@ -84,6 +84,7 @@
       };
 
       input = {
+        numlock_by_default = true;
         kb_layout = "us";
         kb_variant = "altgr-intl";
         follow_mouse = 1;
