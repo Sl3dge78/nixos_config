@@ -184,13 +184,16 @@
     chromium
     qbittorrent
     obs-studio
-   
-    gohufont
     sddm-astronaut
-
     # iphone
     libimobiledevice 
     ifuse
+  ];
+
+  fonts.packages = with pkgs; [
+    gohufont
+    nerdfonts
+    font-awesome
   ];
 
   programs.steam = {

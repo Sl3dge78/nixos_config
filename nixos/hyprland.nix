@@ -16,7 +16,6 @@
     dunst
     libnotify
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
-    nerdfonts
     hyprpaper
   ];
 }
