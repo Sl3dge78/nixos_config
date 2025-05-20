@@ -104,7 +104,7 @@
   # X
   services.xserver = { 
     enable = true;
-    # desktopManager.cinnamon.enable = true;
+    desktopManager.cinnamon.enable = true; # We keep this because it has a lot of fonts and themes and shit
     xkb = {
       layout = "us";
       variant = "altgr-intl";
@@ -156,7 +156,7 @@
   };
 
   # Audio
-  hardware.pulseaudio.enable = true;
+  services.pulseaudio.enable = true;
   services.pipewire.enable = false;
   security.rtkit.enable = true;
 
@@ -194,7 +194,9 @@
 
   fonts.packages = with pkgs; [
     gohufont
-    nerdfonts
+    nerd-fonts.gohufont
+    nerd-fonts.bigblue-terminal
+    ubuntu-sans
     font-awesome
     terminus_font
   ];
@@ -224,7 +226,6 @@
 
   services.samba = {
     enable = true;
-    securityType = "user";
     openFirewall = true;
     settings = {
       global = {
