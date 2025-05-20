@@ -62,7 +62,7 @@ with lib.hm.gvariant;
       gtk-theme = "Mint-Y-Dark-Aqua";
       gtk-timeout-initial = 200;
       gtk-timeout-repeat = 20;
-      icon-theme = "Mint-Y-Sand";
+      icon-theme = "Mint-Y-Dark-Aqua";
       menubar-accel = "F10";
       menubar-detachable = false;
       menus-have-tearoff = false;
