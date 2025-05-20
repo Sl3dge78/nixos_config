@@ -185,6 +185,8 @@
     qbittorrent
     obs-studio
     sddm-astronaut
+    nemo
+    mint-themes
     # iphone
     libimobiledevice 
     ifuse
@@ -194,6 +196,7 @@
     gohufont
     nerdfonts
     font-awesome
+    terminus_font
   ];
 
   programs.steam = {

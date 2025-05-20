@@ -6,12 +6,12 @@
     settings = {
       window = {
         startup_mode = "Maximized";
-        # opacity = 0.9;
       };
       font = {
-        size = 10;
+        # size = 10;
         # normal.family = "GohuFont 14 Nerd Font Mono";
-        normal.family = "GohuFont";
+        size = 9;
+        normal.family = "BigBlueTermPlus Nerd Font Mono";
       };
       mouse = {
         hide_when_typing = true;
