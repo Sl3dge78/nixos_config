@@ -82,6 +82,11 @@
   home.stateVersion = "23.05";
 
   home.file.".config/nixpkgs/config.nix".text = ''
-  { allowUnfree = true; }
+    { 
+      allowUnfree = true;
+      permittedInsecurePackages = [
+          "dotnet-runtime-6.0.36"
+      ];
+    }
     '';
 }
