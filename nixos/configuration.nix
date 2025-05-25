@@ -189,6 +189,7 @@
     mint-themes
     ghidra
     pcsx2
+    dotnet-runtime
     # iphone
     libimobiledevice 
     ifuse
