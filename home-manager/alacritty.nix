@@ -9,7 +9,7 @@
       };
       font = {
         size = 10;
-        normal.family = "GohuFont 14 Nerd Font Mono";
+        normal.family = "GohuFont";
       };
       mouse = {
         hide_when_typing = true;
