@@ -295,7 +295,7 @@
     ];
     style = ''
       * {
-        font-family : "BigBlueTermPlus Nerd Font Mono, Font Awesome";
+        font-family : "GohuFont 14 Nerd Font Mono, Font Awesome";
         font-size: 12;
       }
       window#waybar{
@@ -486,7 +486,7 @@
 /* Author: Newman Sanchez (https://github.com/newmanls) */
 
 * {
-    font:   "BigBlueTermPlus Nerd Font Mono 9";
+    font:   "GohuFont 11 Nerd Font Mono";
 
     bg0:     #282828;
     bg1:     #3c3836;

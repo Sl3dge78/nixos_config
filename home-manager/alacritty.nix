@@ -8,10 +8,8 @@
         startup_mode = "Maximized";
       };
       font = {
-        # size = 10;
-        # normal.family = "GohuFont 14 Nerd Font Mono";
-        size = 9;
-        normal.family = "BigBlueTermPlus Nerd Font Mono";
+        size = 10;
+        normal.family = "GohuFont 14 Nerd Font Mono";
       };
       mouse = {
         hide_when_typing = true;
