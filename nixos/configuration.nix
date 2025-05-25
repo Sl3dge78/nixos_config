@@ -187,6 +187,7 @@
     sddm-astronaut
     nemo
     mint-themes
+    ghidra
     # iphone
     libimobiledevice 
     ifuse
