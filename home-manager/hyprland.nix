@@ -295,8 +295,8 @@
     ];
     style = ''
       * {
-        font-family : "GohuFont 14 Nerd Font Mono, Font Awesome";
-        font-size: 12;
+        font-family : "GohuFont 11 Nerd Font Mono, Font Awesome";
+        font-size: 11;
       }
       window#waybar{
           all:unset;
@@ -486,7 +486,7 @@
 /* Author: Newman Sanchez (https://github.com/newmanls) */
 
 * {
-    font:   "GohuFont 11 Nerd Font Mono";
+    font:   "GohuFont 10";
 
     bg0:     #282828;
     bg1:     #3c3836;
