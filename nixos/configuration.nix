@@ -188,6 +188,7 @@
     nemo
     mint-themes
     ghidra
+    pcsx2
     # iphone
     libimobiledevice 
     ifuse
